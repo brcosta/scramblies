@@ -1,0 +1,8 @@
+{:lein         true
+ :builds       {:app {:target     :browser
+                      :output-dir "resources/public/js"
+                      :asset-path "/js"
+                      :modules    {:app {:entries [scramblies-front.core]}}
+                      :devtools   {:after-load scramblies-front.core/mount-root}}}
+ :dev-http     {3000 {:root    "resources/public"
+                      :handler scramblies-front.handler/app}}}
